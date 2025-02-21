@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       
+       
+        <div id="step1" class="card">
+            <img src="images/Image.png" alt="Verification Image" class="image">
+            <h2>OTP Verification</h2>
+            <p class="subtitle">Enter email and phone number to send a one-time password</p>
+
+            <label>Email</label>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="user@marmeto.com" class="input">
+            </div>
+            <span id="emailError" class="error"></span>
+
+            <label>Phone Number</label>
+            <input type="text" id="phoneNumber" placeholder="+44 9999999999" class="input">
+            <span id="phoneError" class="error"></span>
+
+            <button class="btn" onclick="showOTP()">Continue</button>
+        </div>
+
+       
+        <div id="step2" class="card" style="display: none;">
+            <button class="back-btn" onclick="goBackToStep1()">←</button>
+            <h2>Verification Code</h2>
+            <p class="subtitle">We have sent the verification code to your email address</p>
+
+            <div class="otp-container">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+            </div>
+
+            <button class="btn" onclick="showSuccess()">Confirm</button>
+        </div>
+
+       
+        <div id="step3" class="card" style="display: none;">
+            <button class="back-btn" onclick="goBackToStep2()">←</button>
+            <img src="images/success-icon.png" alt="Success Icon" class="success-icon">
+            <h2>Hey <span id="userName">{USER}</span>!</h2>
+            <p class="subtitle">Congratulations! You have been successfully authenticated</p>
+            <button class="btn" onclick="goBackToStep1()">Done</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
