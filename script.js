@@ -1,3 +1,13 @@
+function enableEmailEdit() {
+    let emailInput = document.getElementById("email");
+    emailInput.removeAttribute("disabled");
+    emailInput.focus();
+}
+
+document.getElementById("email").addEventListener("click", function () {
+    this.removeAttribute("disabled");
+});
+
 function showOTP() {
     let email = document.getElementById("email").value;
     let emailError = document.getElementById("emailError");
@@ -32,7 +42,7 @@ function showSuccess() {
         otpValue += input.value;
     });
 
-    if (otpValue.length < 4) {
+    if (otpValue !== "2025") {
         alert("Please enter a valid 4-digit OTP.");
         return;
     }
