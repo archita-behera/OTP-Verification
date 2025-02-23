@@ -100,7 +100,7 @@ label {
     height: 40px;
     font-size: 20px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #ff6a2f;
     border-radius: 8px;
 }
 
@@ -130,7 +130,7 @@ label {
     width: 83%;
     padding: 12px;
     padding-right: 40px; 
-    border: 1px solid #ccc;
+    border: 1px solid #ff6a2f;
     border-radius: 15px;
     font-size: 14px;
 }
@@ -139,7 +139,7 @@ label {
     position: absolute;
     right: 10px;
     font-size: 16px;
-    color: #555;
+    color: #ff6a2f;
     cursor: pointer;
 }
 
